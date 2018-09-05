@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/*标题*/
+h1{
+	color: #ffffff;
+	padding-top: 100px;
+}
+
+/*主内容区*/
+#content{
+	width: 960px;
+	margin: 50px auto 0;
+}
+
+#content ul{
+	width: 980px;
+}
+
+#content ul li{
+	width: 225px;
+	height: 180px;
+	float: left;
+	margin-right: 20px;
+}
+
+#content ul li a{
+	display: block;
+	width: 225px;
+	height: 180px;
+	position: relative;
+	/*远近度*/
+	perspective: 500px;
+	text-decoration: none;
+}
+
+#content ul li a img{
+	display: block;
+}
+
+#content ul li a .tips{
+	height: 24px;
+	background: rgba(0,0,0,0.5);
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/*正反面*/
+#content ul li a > div{
+	transition: all 1s;
+	/*背面不可视*/
+	backface-visibility: hidden;
+}
+
+/*正面内容*/
+#content ul li a:hover .forward{
+	transform: rotateY(-180deg);
+}
+
+/*背面内容*/
+#content ul li a .back{
+	width: 225px;
+	height: 180px;
+	background: url(../images/bg.jpg) no-repeat;
+	transform: rotateY(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#content ul li a .back h3{
+	color: #FFFFFF;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px dashed #FFFFFF;
+	margin-bottom: 15px;
+}
+
+#content ul li a .back p{
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 18px;
+	text-indent: 2em;
+	padding: 0 10px;
+}
+
+#content ul li a:hover .back{
+	transform: rotateY(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
